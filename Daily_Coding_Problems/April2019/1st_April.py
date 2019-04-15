@@ -20,7 +20,7 @@ def encode(s):
 
     result = ''
     current_char = s[0]
-    current_count = 1
+    current_count = 0
     for i, char in enumerate(s, 1):
         if char == current_char:
             current_count += 1
@@ -30,6 +30,8 @@ def encode(s):
             current_count = 1
     result += str(current_count) + current_char
     return result
+
+print(encode("aaaabbbccd"))
 
 #Decoding
 def decode(s):
